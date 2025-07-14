@@ -14,6 +14,7 @@ const io = new Server(server, {
   cors: {
     origin: 'https://mdmuhim0096.github.io/froom/',
     methods: ['GET', 'POST'],
+    credentials: true
   },
 });
 
