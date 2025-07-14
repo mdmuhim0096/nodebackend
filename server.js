@@ -185,7 +185,7 @@ const server = http.createServer(app);
 // ✅ Updated CORS setup for both local & deployed frontend
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://your-frontend-app.onrender.com", // Replace with your frontend deploy URL
+  "https://mdmuhim0096.github.io/froom", // Replace with your frontend deploy URL
 ];
 
 app.use(cors({
