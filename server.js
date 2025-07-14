@@ -182,20 +182,8 @@ const shareRouter = require("./router/share");
 const app = express();
 const server = http.createServer(app);
 
-// ✅ Updated CORS setup for both local & deployed frontend
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://mdmuhim0096.github.io/froom", // Replace with your frontend deploy URL
-];
-
 app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
+  origin: "https://mdmuhim0096.github.io/froom/",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
